@@ -1,4 +1,4 @@
-import TextField from '@/components/TextField';
+import TextField from '@/components/common/TextField';
 import { AuthContext } from '@/context/AuthContext';
 import { yupResolver } from '@hookform/resolvers/yup';
 import React, { useContext } from 'react';

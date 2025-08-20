@@ -1,4 +1,4 @@
-import TextField from '@/components/TextField';
+import TextField from '@/components/common/TextField';
 import { AuthContext } from '@/context/AuthContext';
 import { yupResolver } from '@hookform/resolvers/yup';
 import React, { useContext } from 'react';
@@ -24,7 +24,7 @@ export default function LoginScreen({ navigation }) {
     } catch (err) {
       const msg = err?.message || 'Unable to login. Please try again.';
       if (/invalid/i.test(msg)) {
-        Alert.alert('Login failed', 'Wrong email or password.');
+        Alert.alert('Login failed', 'Invalid email/password format.');
       } else {
         Alert.alert('Login failed', msg);
       }
@@ -33,7 +33,7 @@ export default function LoginScreen({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Welcome back</Text>
+      <Text style={styles.title}>Sign in to Kloudius</Text>
 
       <Controller
         control={control}

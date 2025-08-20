@@ -7,7 +7,8 @@ export default function HomeScreen() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Hi {user?.name || user?.email} 👋</Text>
+      <Text style={styles.title}>Hi {user?.name} 👋</Text>
+      <Text style={styles.subtitle}>Email:- {user?.email}</Text>
       <Text style={styles.subtitle}>You’re logged in.</Text>
 
       <TouchableOpacity style={styles.btnOutline} onPress={signOut}>
